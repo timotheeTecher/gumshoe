@@ -1,29 +1,63 @@
 //Libraries
 import React from "react";
-import classes from "./Header.module.scss";
 
 //Components
 import Navigation from "./Navigation/Navigation";
 
 //Components from MUI
-import Typography from "@mui/material/Typography"; 
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Header = () => {
   return (
-    <header className={classes.Header}>
-      <Navigation />
-      <Typography
+    <header>
+      <Box
         sx={{
-          marginTop: "210px",
-          fontSize: "clamp(7rem, 1.6154rem + 3.0769vw, 10rem)"
+          height: "100vh",
+          background: `url("${process.env.PUBLIC_URL}/assets/images/hero-banner.jpg")`,
+          backgroundPosition: "center",
+          backgroundSize: "cover"
         }}
-        variant="h1"
-        align="center"
-        color={"common.white"}
-        typography={"typography.fontFamily"}
       >
-        You'll never be so happy.<br/>To step on a gum.
-      </Typography>
+        <Navigation />
+        <Box
+          sx={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+        >
+          <Typography
+            sx={{
+              marginBottom: "60px"
+            }}
+            variant="h1"
+            align="center"
+            color={"common.white"}
+            typography={"typography.fontFamily"}
+            fontSize={"clamp(1rem, 0.3rem + 5.6vw, 8rem)"}
+            fontWeight={"900"}
+          >
+            You'll never be so happy.<br/>To step on a gum.
+          </Typography>
+
+          <Button
+            sx={{
+              color: "white"
+            }}
+            variant="contained"
+            color="secondary"
+            size="large"
+            endIcon={<ArrowForwardIosIcon/>}
+          >
+            Discover
+          </Button>
+        </Box>
+      </Box>
     </header>
   );
 }

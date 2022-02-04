@@ -14,14 +14,16 @@ import Container from "@mui/material/Container";
 const Navigation = () => {
   return(
     <AppBar
+      sx={{
+        boxShadow: 0
+      }}
       component={"nav"}
-      position="static"
+      position="fixed"
       color="primary"
     >
       <Container maxWidth="lg">
         <Toolbar
           sx={{
-            position: "relative",
             height: "60px",
             display: "flex",
             listStyle: "none"

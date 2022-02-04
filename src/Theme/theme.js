@@ -10,6 +10,6 @@ export const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: "'Urbanist', 'Roboto', 'Arial', sans-serif"
+    fontFamily: "'Nunito', 'Roboto', 'Arial', sans-serif"
   },
 });
