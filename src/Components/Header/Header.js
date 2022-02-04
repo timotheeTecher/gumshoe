@@ -6,12 +6,9 @@ import classes from "./Header.module.scss";
 import Navigation from "./Navigation/Navigation";
 
 const Header = () => {
-
   return (
     <header className={classes.Header}>
-      <nav>
-        <Navigation />
-      </nav>
+      <Navigation />
     </header>
   );
 }
