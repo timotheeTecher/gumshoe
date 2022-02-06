@@ -10,6 +10,7 @@ import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
+import AccountCircleOutlined from "@mui/icons-material/AccountCircleOutlined";
 
 const Navigation = () => {
   return(
@@ -21,14 +22,15 @@ const Navigation = () => {
       position="fixed"
       color="primary"
     >
-      <Container maxWidth="lg">
-        <Toolbar
+      <Toolbar>
+        <Container
           sx={{
+            width: "100%",
             height: "60px",
             display: "flex",
-            listStyle: "none"
+            alignItems: "center",
           }}
-          component={"ul"}
+          maxWidth="lg"
         >
           <Box 
             sx={{
@@ -45,7 +47,7 @@ const Navigation = () => {
           <Box
             sx={{
               width: "220px",
-              marginTop: "90px"
+              marginTop: "100px"
             }}
           >
             <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}/>
@@ -62,9 +64,15 @@ const Navigation = () => {
             <NavigationItem to={routes.ABOUT}>About us</NavigationItem>
             <NavigationItem to={routes.CONTACT}>Contact</NavigationItem>
           </Box>
-
-        </Toolbar>
         </Container>
+
+        <AccountCircleOutlined
+          sx={{
+            cursor: "pointer"
+          }}
+          fontSize="large"
+        />
+      </Toolbar>
     </AppBar>
   );
 }
