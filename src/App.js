@@ -21,7 +21,6 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <div className="App">
         <BrowserRouter>
-          <Header/>
           <Routes>
             <Route path={routes.HOME} element={<Home/>}/>
             <Route path={routes.SHOP} element={<Shop/>}/>
